@@ -24,10 +24,10 @@ public class PrincipalConversion {
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting()
                 .create();
-        String dirApi="https://v6.exchangerate-api.com/v6/2450d6d9980a2509de81c0e7/pair/";
+        //String dirApi="https://v6.exchangerate-api.com/v6/2450d6d9980a2509de81c0e7/pair/";
         String paresAconvetir;
         float montoAConvertir= 0.0f;
-        String direccion="";
+        String complementoDireccion="";
 
         while(opcion != 9) {
             monedaService.mostrarMenu();
@@ -37,70 +37,22 @@ public class PrincipalConversion {
                 case 1:
                     paresAconvetir="EUR/USD/";
                     montoAConvertir=2f;
-                    direccion =dirApi+paresAconvetir+montoAConvertir;
-
-                    try {
-                        HttpClient client = HttpClient.newHttpClient();
-                        HttpRequest request = HttpRequest.newBuilder()
-                                .uri(URI.create(direccion))
-                                .build();
-                        HttpResponse<String> response = client
-                                .send(request, HttpResponse.BodyHandlers.ofString());
-
-                        String json = response.body();
-                        System.out.println(json);
-                    }catch (NumberFormatException e){
-                        System.out.println("Ocurrió un error: ");
-                        System.out.println(e.getMessage());
-                    }catch(IllegalArgumentException e) {
-                        System.out.println("Error en la URI, verifique la dirección.");
-                    }
+                    complementoDireccion =paresAconvetir+montoAConvertir;
+                    monedaService.convetirMoneda(complementoDireccion);
 
                     break;
                 case 2:
                     paresAconvetir="EUR/USD/";
-                    montoAConvertir=1f;
-                    direccion =dirApi+paresAconvetir+montoAConvertir;
-
-                    try {
-                        HttpClient client = HttpClient.newHttpClient();
-                        HttpRequest request = HttpRequest.newBuilder()
-                                .uri(URI.create(direccion))
-                                .build();
-                        HttpResponse<String> response = client
-                                .send(request, HttpResponse.BodyHandlers.ofString());
-
-                        String json = response.body();
-                        System.out.println(json);
-                    }catch (NumberFormatException e){
-                        System.out.println("Ocurrió un error: ");
-                        System.out.println(e.getMessage());
-                    }catch(IllegalArgumentException e) {
-                        System.out.println("Error en la URI, verifique la dirección.");
-                    }
+                    montoAConvertir=10f;
+                    complementoDireccion =paresAconvetir+montoAConvertir;
+                    monedaService.convetirMoneda(complementoDireccion);
 
                     break;
                 case 3:
                     paresAconvetir="EUR/USD/";
-                    montoAConvertir=1f;
-                    direccion =dirApi+paresAconvetir+montoAConvertir;
-
-                    try {
-                        HttpClient client = HttpClient.newHttpClient();
-                        HttpRequest request = HttpRequest.newBuilder()
-                                .uri(URI.create(direccion))
-                                .build();
-                        HttpResponse<String> response = client
-                                .send(request, HttpResponse.BodyHandlers.ofString());
-
-                        String json = response.body();
-                        System.out.println(json);
-                    }catch (NumberFormatException e){
-                        System.out.println("Ocurrió un error: ");
-                        System.out.println(e.getMessage());
-                    }catch(IllegalArgumentException e) {
-                        System.out.println("Error en la URI, verifique la dirección.");
-                    }
+                    montoAConvertir=100f;
+                    complementoDireccion =paresAconvetir+montoAConvertir;
+                    monedaService.convetirMoneda(complementoDireccion);
 
                         break;
                 case 9:

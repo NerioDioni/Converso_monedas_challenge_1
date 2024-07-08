@@ -10,61 +10,49 @@ public class PrincipalConversion {
         int opcion = 0;
         String parAconvetir;
         MonedaService monedaService=new MonedaService();
-        Scanner lectura = new Scanner(System.in);
 
 
         while(opcion != 9) {
-
             try{
+                Scanner lectura = new Scanner(System.in);
                 monedaService.mostrarMenu();
                 opcion = lectura.nextInt();
             }catch (InputMismatchException e) {
                 System.out.println("Ocurrió un error:se esperaba un numero de tipo entero ");
-                System.out.println(e.getMessage());
-              // opcion = 25;
-                //break;
+                System.out.println(e);
+                opcion=-1;
 
             }
-
-
-            //opcion = lectura.nextInt();
             switch (opcion){
                 case 1:
                     parAconvetir="EUR/USD/";
                     monedaService.convetirMoneda(parAconvetir);
-                    System.out.println("---valor de opcion:"+opcion);
-
                     break;
-
                 case 2:
-                    parAconvetir="EUR/USD/";
+                    parAconvetir="MXN/EUR/";
                     monedaService.convetirMoneda(parAconvetir);
                     break;
-
                 case 3:
-                    parAconvetir="EUR/USD/";
+                    parAconvetir="PAB/MXN/";
                     monedaService.convetirMoneda(parAconvetir);
                     break;
-
                 case 4:
-                    parAconvetir="EUR/USD/";
+                    parAconvetir="RUB/COP/";
                     monedaService.convetirMoneda(parAconvetir);
                     break;
                 case 5:
-                    parAconvetir="EUR/USD/";
+                    parAconvetir="EUR/TRY/";
                     monedaService.convetirMoneda(parAconvetir);
                     break;
                 case 6:
-                    parAconvetir="EUR/USD/";
+                    parAconvetir="NZD/KRW/";
                     monedaService.convetirMoneda(parAconvetir);
                     break;
-
                 case 9:
                     System.out.println("Finalizando el programa. Muchas gracias por usar nuestros servicios");
                     break;
                 default:
                     System.out.println("Opción inválida");
-                    System.out.println("---valor de opcion:"+opcion);
 
                     break;
            }

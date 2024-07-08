@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c05ebf0f-479f-4d3b-853a-9cd0b7ad9de0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modelo/Moneda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/MonedaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/MonedaDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/principal/PrincipalConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/PrincipalConversion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/MonedaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/MonedaService.java" afterDir="false" />
     </list>
@@ -16,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -87,6 +91,19 @@
           <line>11</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/principal/PrincipalConversion.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
